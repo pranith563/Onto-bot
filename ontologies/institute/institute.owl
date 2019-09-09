@@ -1,0 +1,1177 @@
+<rdf:RDF xmlns="http://localhost/Institute#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#" xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#" xmlns:p1="hhtp://localhost/Institute#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:swrlb="http://www.w3.org/2003/11/swrlb#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xml:base="http://localhost/Institute">
+<owl:Ontology rdf:about="http://localhost/Institute"/>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  http://www.w3.org/2001/XMLSchema#date  -->
+<rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  http://localhost/Institute#affiliationOf  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#affiliationOf">
+<rdfs:range rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Unit"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#belongsToCentre  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#belongsToCentre">
+<rdfs:range rdf:resource="http://localhost/Institute#Centre"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#centretHead  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#centretHead">
+<rdfs:domain rdf:resource="http://localhost/Institute#Centre"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Teacher"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#editorOfEvents  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#editorOfEvents">
+<rdfs:range rdf:resource="http://localhost/Institute#Events"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Teacher"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#eventsEditor  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#eventsEditor">
+<rdfs:domain rdf:resource="http://localhost/Institute#Events"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Teacher"/>
+<owl:inverseOf rdf:resource="http://localhost/Institute#editorOfEvents"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasAffiliation  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasAffiliation">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Unit"/>
+<owl:inverseOf rdf:resource="http://localhost/Institute#affiliationOf"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasArticlePublication  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasArticlePublication">
+<rdfs:range rdf:resource="http://localhost/Institute#Article"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasAuthor  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasAuthor">
+<rdfs:range rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Publication"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasBookPublication  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasBookPublication">
+<rdfs:range rdf:resource="http://localhost/Institute#Book"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasDiscipline  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasDiscipline">
+<rdfs:range rdf:resource="http://localhost/Institute#Discipline"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Student"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasGender  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasGender">
+<rdfs:range rdf:resource="http://localhost/Institute#Gender"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+</owl:ObjectProperty>
+ <!--
+ http://localhost/Institute#hasPrincipalInvestigator 
+-->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasPrincipalInvestigator">
+<rdfs:domain rdf:resource="http://localhost/Institute#Project"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Teacher"/>
+<owl:inverseOf rdf:resource="http://localhost/Institute#principleInvestigatorOf"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasQualification  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasQualification">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasResearchInterest  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasResearchInterest">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Research_Interest"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#hasSupervisor  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#hasSupervisor">
+<rdfs:domain rdf:resource="http://localhost/Institute#Student"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Teacher"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#listedCourse  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#listedCourse">
+<rdfs:domain rdf:resource="http://localhost/Institute#Centre"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Course_Name"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#pgStudent  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#pgStudent">
+<rdfs:range rdf:resource="http://localhost/Institute#Postgraduate_Course"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Postgraduate_Student"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#principleInvestigatorOf  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#principleInvestigatorOf"/>
+ <!--  http://localhost/Institute#projectAssistantOf  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#projectAssistantOf">
+<rdfs:range rdf:resource="http://localhost/Institute#Project"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#ProjectAssistant"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#researchArea  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#researchArea">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://localhost/Institute#Research_Topic"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#researchInterestOf  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#researchInterestOf">
+<rdfs:range rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Research_Interest"/>
+<owl:inverseOf rdf:resource="http://localhost/Institute#hasResearchInterest"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#supervisorOf  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#supervisorOf">
+<rdfs:range rdf:resource="http://localhost/Institute#Student"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Teacher"/>
+<owl:inverseOf rdf:resource="http://localhost/Institute#hasSupervisor"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#ugStudent  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#ugStudent">
+<rdfs:range rdf:resource="http://localhost/Institute#Undergraduate_Course"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Undergraduate_Student"/>
+</owl:ObjectProperty>
+ <!--  http://localhost/Institute#unitHead  -->
+<owl:ObjectProperty rdf:about="http://localhost/Institute#unitHead">
+<rdfs:range rdf:resource="http://localhost/Institute#Teacher"/>
+<rdfs:domain rdf:resource="http://localhost/Institute#Unit"/>
+</owl:ObjectProperty>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  http://localhost/Institute#ZIP  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#ZIP">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#age  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#age">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#award  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#award">
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Award</rdfs:label>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Award received by a person</rdfs:comment>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#basicSalary  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#basicSalary">
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain>
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="http://localhost/Institute#AdministrativeStaff"/>
+<rdf:Description rdf:about="http://localhost/Institute#Teacher"/>
+</owl:unionOf>
+</owl:Class>
+</rdfs:domain>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#city  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#city">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#country  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#country">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#dateOfBirth  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#dateOfBirth">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#email  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#email">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#eventsAttended  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#eventsAttended">
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Events Attended</rdfs:label>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+A person attended national and internatinal events, for example, Seminars, Conferences, Symposiums, Workshops, etc.
+</rdfs:comment>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#firstName  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#firstName">
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First Name</rdfs:label>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#grossSalary  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#grossSalary">
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+<rdfs:domain>
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<rdf:Description rdf:about="http://localhost/Institute#AdministrativeStaff"/>
+<rdf:Description rdf:about="http://localhost/Institute#Teacher"/>
+</owl:unionOf>
+</owl:Class>
+</rdfs:domain>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#hasProjectDuration  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#hasProjectDuration">
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#hasTeachingExperience  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#hasTeachingExperience">
+<rdfs:domain rdf:resource="http://localhost/Institute#Teacher"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#heldOn  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#heldOn">
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+The conference, seminar, symposium or workshop held on the year
+</rdfs:comment>
+<rdfs:domain rdf:resource="http://localhost/Institute#Events"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#homepage  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#homepage">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#lastName  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#lastName">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#phoneNo  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#phoneNo">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#projectEnds  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#projectEnds">
+<rdfs:domain rdf:resource="http://localhost/Institute#Project"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#projectStarted  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#projectStarted">
+<rdfs:domain rdf:resource="http://localhost/Institute#Project"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#publicationDate  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#publicationDate">
+<rdfs:domain rdf:resource="http://localhost/Institute#Publication"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#resourcePersonOf  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#resourcePersonOf">
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+A person being invited as a resource person to deliver lectures, etc.
+</rdfs:comment>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#rollNo  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#rollNo">
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roll Number</rdfs:label>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Institutional Roll Number of a person</rdfs:comment>
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#state  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#state">
+<rdfs:domain rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--  http://localhost/Institute#topicOf  -->
+<owl:DatatypeProperty rdf:about="http://localhost/Institute#topicOf">
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+The topic of the conference, symposium, seminar or workshop
+</rdfs:comment>
+<rdfs:domain rdf:resource="http://localhost/Institute#Events"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  http://localhost/Institute#ADIS  -->
+<owl:Class rdf:about="http://localhost/Institute#ADIS">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Postgraduate_Course"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#MMath"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#MStat"/>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This course is equivalent to MLISc degree</rdfs:comment>
+</owl:Class>
+ <!--  http://localhost/Institute#AdministrativeStaff  -->
+<owl:Class rdf:about="http://localhost/Institute#AdministrativeStaff">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Person"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Assistant"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Student"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Teacher"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Article  -->
+<owl:Class rdf:about="http://localhost/Institute#Article">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Publication"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Book"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Periodical"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Proceedings"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Thesis"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Assistant  -->
+<owl:Class rdf:about="http://localhost/Institute#Assistant">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Person"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Student"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Teacher"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Assistant_professor  -->
+<owl:Class rdf:about="http://localhost/Institute#Assistant_professor">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Teacher"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Associate_Professor"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Professor"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Associate_Professor  -->
+<owl:Class rdf:about="http://localhost/Institute#Associate_Professor">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Teacher"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Professor"/>
+</owl:Class>
+ <!--  http://localhost/Institute#BMath  -->
+<owl:Class rdf:about="http://localhost/Institute#BMath">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Undergraduate_Course"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#BStat"/>
+</owl:Class>
+ <!--  http://localhost/Institute#BStat  -->
+<owl:Class rdf:about="http://localhost/Institute#BStat">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Undergraduate_Course"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Book  -->
+<owl:Class rdf:about="http://localhost/Institute#Book">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Publication"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Periodical"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Proceedings"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Thesis"/>
+</owl:Class>
+ <!--  http://localhost/Institute#BookArticle  -->
+<owl:Class rdf:about="http://localhost/Institute#BookArticle">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Article"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#ConferenceArticle"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#JournalArticle"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#WorkshopArticle"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Centre  -->
+<owl:Class rdf:about="http://localhost/Institute#Centre">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#listedCourse"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Course_Name"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+ <!--  http://localhost/Institute#Conference  -->
+<owl:Class rdf:about="http://localhost/Institute#Conference">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Events"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Workshop"/>
+</owl:Class>
+ <!--  http://localhost/Institute#ConferenceArticle  -->
+<owl:Class rdf:about="http://localhost/Institute#ConferenceArticle">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Article"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#JournalArticle"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#WorkshopArticle"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Course_Name  -->
+<owl:Class rdf:about="http://localhost/Institute#Course_Name"/>
+ <!--  http://localhost/Institute#Director  -->
+<owl:Class rdf:about="http://localhost/Institute#Director">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#AdministrativeStaff"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Discipline  -->
+<owl:Class rdf:about="http://localhost/Institute#Discipline"/>
+ <!--  http://localhost/Institute#DoctoralThesis  -->
+<owl:Class rdf:about="http://localhost/Institute#DoctoralThesis">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Thesis"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#MastersThesis"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Events  -->
+<owl:Class rdf:about="http://localhost/Institute#Events"/>
+ <!--  http://localhost/Institute#Gender  -->
+<owl:Class rdf:about="http://localhost/Institute#Gender">
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Programes offered by the Institute</rdfs:comment>
+</owl:Class>
+ <!--  http://localhost/Institute#Journal  -->
+<owl:Class rdf:about="http://localhost/Institute#Journal">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Periodical"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Magazine"/>
+</owl:Class>
+ <!--  http://localhost/Institute#JournalArticle  -->
+<owl:Class rdf:about="http://localhost/Institute#JournalArticle">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Article"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#WorkshopArticle"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Junior_Research_Student  -->
+<owl:Class rdf:about="http://localhost/Institute#Junior_Research_Student">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Research_Student"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Senior_Research_Student"/>
+</owl:Class>
+ <!--  http://localhost/Institute#MMath  -->
+<owl:Class rdf:about="http://localhost/Institute#MMath">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Postgraduate_Course"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#MStat"/>
+</owl:Class>
+ <!--  http://localhost/Institute#MStat  -->
+<owl:Class rdf:about="http://localhost/Institute#MStat">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Postgraduate_Course"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Magazine  -->
+<owl:Class rdf:about="http://localhost/Institute#Magazine">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Periodical"/>
+</owl:Class>
+ <!--  http://localhost/Institute#MastersThesis  -->
+<owl:Class rdf:about="http://localhost/Institute#MastersThesis">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Thesis"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Periodical  -->
+<owl:Class rdf:about="http://localhost/Institute#Periodical">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Publication"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Proceedings"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Thesis"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Person  -->
+<owl:Class rdf:about="http://localhost/Institute#Person">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#belongsToCentre"/>
+<owl:onClass rdf:resource="http://localhost/Institute#Centre"/>
+<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#hasAffiliation"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Unit"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#hasGender"/>
+<owl:onClass rdf:resource="http://localhost/Institute#Gender"/>
+<owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+ <!--  http://localhost/Institute#PhD_Programme  -->
+<owl:Class rdf:about="http://localhost/Institute#PhD_Programme">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Course_Name"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#PostDoc_Programme"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Postgraduate_Course"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Undergraduate_Course"/>
+</owl:Class>
+ <!--  http://localhost/Institute#PostDoc_Programme  -->
+<owl:Class rdf:about="http://localhost/Institute#PostDoc_Programme">
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Post Doctoral Programme</rdfs:label>
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Course_Name"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Postgraduate_Course"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Undergraduate_Course"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Postgraduate_Course  -->
+<owl:Class rdf:about="http://localhost/Institute#Postgraduate_Course">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Course_Name"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Undergraduate_Course"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Postgraduate_Student  -->
+<owl:Class rdf:about="http://localhost/Institute#Postgraduate_Student">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Student"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#pgStudent"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Postgraduate_Course"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Research_Student"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Undergraduate_Student"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Proceedings  -->
+<owl:Class rdf:about="http://localhost/Institute#Proceedings">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Publication"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Thesis"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Professor  -->
+<owl:Class rdf:about="http://localhost/Institute#Professor">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Teacher"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Project  -->
+<owl:Class rdf:about="http://localhost/Institute#Project">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#hasProjectDuration"/>
+<owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">36</owl:maxCardinality>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">List of on going or finished projects</rdfs:comment>
+</owl:Class>
+ <!--  http://localhost/Institute#ProjectAssistant  -->
+<owl:Class rdf:about="http://localhost/Institute#ProjectAssistant">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Assistant"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Publication  -->
+<owl:Class rdf:about="http://localhost/Institute#Publication">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#hasAuthor"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Person"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+ <!--  http://localhost/Institute#Qualification  -->
+<owl:Class rdf:about="http://localhost/Institute#Qualification"/>
+ <!--  http://localhost/Institute#Research_Interest  -->
+<owl:Class rdf:about="http://localhost/Institute#Research_Interest">
+<rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#researchInterestOf"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Person"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+ <!--  http://localhost/Institute#Research_Student  -->
+<owl:Class rdf:about="http://localhost/Institute#Research_Student">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Student"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#hasResearchInterest"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Research_Interest"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Undergraduate_Student"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Research_Topic  -->
+<owl:Class rdf:about="http://localhost/Institute#Research_Topic">
+<rdfs:comment xml:lang="en">
+<b>Research topic</b> refers to the core area in which some one has done or doing research for his/her PhD degree
+</rdfs:comment>
+</owl:Class>
+ <!--  http://localhost/Institute#Senior_Research_Student  -->
+<owl:Class rdf:about="http://localhost/Institute#Senior_Research_Student">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Research_Student"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Student  -->
+<owl:Class rdf:about="http://localhost/Institute#Student">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Person"/>
+<owl:disjointWith rdf:resource="http://localhost/Institute#Teacher"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Teacher  -->
+<owl:Class rdf:about="http://localhost/Institute#Teacher">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Person"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#hasQualification"/>
+<owl:hasValue rdf:resource="http://localhost/Institute#PhD"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#hasResearchInterest"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Research_Interest"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+ <!--  http://localhost/Institute#Thesis  -->
+<owl:Class rdf:about="http://localhost/Institute#Thesis">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Publication"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Undergraduate_Course  -->
+<owl:Class rdf:about="http://localhost/Institute#Undergraduate_Course">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Course_Name"/>
+</owl:Class>
+ <!--  http://localhost/Institute#Undergraduate_Student  -->
+<owl:Class rdf:about="http://localhost/Institute#Undergraduate_Student">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Student"/>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="http://localhost/Institute#ugStudent"/>
+<owl:someValuesFrom rdf:resource="http://localhost/Institute#Undergraduate_Course"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+ <!--  http://localhost/Institute#Unit  -->
+<owl:Class rdf:about="http://localhost/Institute#Unit"/>
+ <!--  http://localhost/Institute#Workshop  -->
+<owl:Class rdf:about="http://localhost/Institute#Workshop">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Events"/>
+</owl:Class>
+ <!--  http://localhost/Institute#WorkshopArticle  -->
+<owl:Class rdf:about="http://localhost/Institute#WorkshopArticle">
+<rdfs:subClassOf rdf:resource="http://localhost/Institute#Article"/>
+</owl:Class>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+ <!--  http://localhost/Institute#A.R.D._Prasad  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#A.R.D._Prasad">
+<rdf:type rdf:resource="http://localhost/Institute#Associate_Professor"/>
+<hasTeachingExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasTeachingExperience>
+<age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">57</age>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARD</firstName>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASSP039</rollNo>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</city>
+<country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prasad</lastName>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ard@drtc.isibang.ac.in</email>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~ard</homepage>
+<hasResearchInterest rdf:resource="http://localhost/Institute#AI"/>
+<supervisorOf rdf:resource="http://localhost/Institute#Biswanath_Dutta"/>
+<editorOfEvents rdf:resource="http://localhost/Institute#DL2005"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Digital_library"/>
+<editorOfEvents rdf:resource="http://localhost/Institute#ICSD2007"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasQualification rdf:resource="http://localhost/Institute#MLISc"/>
+<hasQualification rdf:resource="http://localhost/Institute#MPhil"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#NLP"/>
+<supervisorOf rdf:resource="http://localhost/Institute#Nabonita_Guha"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Ontology"/>
+<supervisorOf rdf:resource="http://localhost/Institute#Sanjeev_Kumar_Sunny"/>
+<hasGender rdf:resource="http://localhost/Institute#male"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#ADIS_1st_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#ADIS_1st_year">
+<rdf:type rdf:resource="http://localhost/Institute#ADIS"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#ADIS_2nd_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#ADIS_2nd_year">
+<rdf:type rdf:resource="http://localhost/Institute#ADIS"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#AI  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#AI">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Agrometry  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Agrometry">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#SS_Panza"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Anand_Kumar_Pandey  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Anand_Kumar_Pandey">
+<rdf:type rdf:resource="http://localhost/Institute#Junior_Research_Student"/>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anand</firstName>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beneras</city>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pandey</lastName>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS075</rollNo>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anand@drtc.isibang.ac.in</email>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~anand</homepage>
+<hasQualification rdf:resource="http://localhost/Institute#BCom"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<hasSupervisor rdf:resource="http://localhost/Institute#Devika_P_Madalli"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Digital_library"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasDiscipline rdf:resource="http://localhost/Institute#Library_and_Information_Science"/>
+<hasQualification rdf:resource="http://localhost/Institute#MLISc"/>
+<hasGender rdf:resource="http://localhost/Institute#male"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Anthropology  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Anthropology">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--
+ http://localhost/Institute#Automatic_classification 
+-->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Automatic_classification">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#Devika_P_Madalli"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BA  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BA">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BCom  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BCom">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BMath_1st_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BMath_1st_year">
+<rdf:type rdf:resource="http://localhost/Institute#BMath"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BMath_2nd_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BMath_2nd_year">
+<rdf:type rdf:resource="http://localhost/Institute#BMath"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BMath_3rd_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BMath_3rd_year">
+<rdf:type rdf:resource="http://localhost/Institute#BMath"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BSc  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BSc">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BStat_1st_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BStat_1st_year">
+<rdf:type rdf:resource="http://localhost/Institute#BStat"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BStat_2nd_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BStat_2nd_year">
+<rdf:type rdf:resource="http://localhost/Institute#BStat"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#BStat_3rd_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#BStat_3rd_year">
+<rdf:type rdf:resource="http://localhost/Institute#BStat"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Bibliometrics  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Bibliometrics">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#I.K._Ravichandra_Rao"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Biswanath_Dutta  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Biswanath_Dutta">
+<rdf:type rdf:resource="http://localhost/Institute#Senior_Research_Student"/>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biswanath</firstName>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dutta</lastName>
+<country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolkata</city>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS039</rollNo>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bisu@drtc.isibang.ac.in</email>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~bisu</homepage>
+<hasSupervisor rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+<hasQualification rdf:resource="http://localhost/Institute#BSc"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasDiscipline rdf:resource="http://localhost/Institute#Library_and_Information_Science"/>
+<hasQualification rdf:resource="http://localhost/Institute#MLISc"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Ontology"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#SWS"/>
+<researchArea rdf:resource="http://localhost/Institute#Semantic_Web_based_e-Government_services"/>
+<hasGender rdf:resource="http://localhost/Institute#male"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Commerce  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Commerce">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Computer_Science  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Computer_Science">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#DL2005  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#DL2005">
+<rdf:type rdf:resource="http://localhost/Institute#Workshop"/>
+<heldOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-24 Mar 2004</heldOn>
+<topicOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Workshop on Digital Libraries</topicOf>
+<eventsEditor rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#DRTC  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#DRTC">
+<rdf:type rdf:resource="http://localhost/Institute#Unit"/>
+<affiliationOf rdf:resource="http://localhost/Institute#Manju_M"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Data_mining  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Data_mining">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#I.K._Ravichandra_Rao"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Devika_P_Madalli  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Devika_P_Madalli">
+<rdf:type rdf:resource="http://localhost/Institute#Assistant_professor"/>
+<age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">47</age>
+<hasTeachingExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hasTeachingExperience>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</city>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Devika P.</firstName>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lec003</rollNo>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madalli</lastName>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">devika@drtc.isibang.ac.in</email>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~devika</homepage>
+<supervisorOf rdf:resource="http://localhost/Institute#Anand_Kumar_Pandey"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Automatic_classification"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<editorOfEvents rdf:resource="http://localhost/Institute#ICT2006"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<supervisorOf rdf:resource="http://localhost/Institute#Mithun_Raj_M"/>
+<editorOfEvents rdf:resource="http://localhost/Institute#NC2005"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Ontology"/>
+<hasGender rdf:resource="http://localhost/Institute#female"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Digital_Library  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Digital_Library">
+<rdf:type rdf:resource="http://localhost/Institute#Project"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital Library</rdfs:label>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+<projectStarted rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-03-02</projectStarted>
+<hasProjectDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#int">47</hasProjectDuration>
+<hasPrincipalInvestigator rdf:resource="http://localhost/Institute#Devika_P_Madalli"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Digital_library  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Digital_library">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#Vinit_Kumar"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#EMU  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#EMU">
+<rdf:type rdf:resource="http://localhost/Institute#Unit"/>
+<affiliationOf rdf:resource="http://localhost/Institute#SS_Panza"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Faceted_ontology  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Faceted_ontology">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Topic"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Geometry  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Geometry">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#TSSK_Rao"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#HigherSecondary  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#HigherSecondary">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#History  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#History">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#I.K._Ravichandra_Rao  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#I.K._Ravichandra_Rao">
+<rdf:type rdf:resource="http://localhost/Institute#Professor"/>
+<hasTeachingExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</hasTeachingExperience>
+<age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">65</age>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IK Ravichandra</firstName>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mangalore</city>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prof003</rollNo>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rao</lastName>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">akr@drtc.isibang.ac.in</email>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~ikr</homepage>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Bibliometrics"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Data_mining"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<researchArea rdf:resource="http://localhost/Institute#Quantitative_analysis"/>
+<hasGender rdf:resource="http://localhost/Institute#male"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#ICSD2007  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#ICSD2007">
+<rdf:type rdf:resource="http://localhost/Institute#Conference"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+International Conference on Semantic Web and Digital Libraries
+</rdfs:label>
+<heldOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21-23 Feb 2007</heldOn>
+<topicOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+International Conference on Semantic Web and Digital Libraries
+</topicOf>
+<eventsEditor rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#ICT2006  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#ICT2006">
+<rdf:type rdf:resource="http://localhost/Institute#Conference"/>
+<heldOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11-14 Mar 2006</heldOn>
+<topicOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+National Conference on Information Communication and Technology
+</topicOf>
+<eventsEditor rdf:resource="http://localhost/Institute#Devika_P_Madalli"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#ISIBC  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#ISIBC">
+<rdf:type rdf:resource="http://localhost/Institute#Centre"/>
+<listedCourse rdf:resource="http://localhost/Institute#ADIS_1st_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#ADIS_2nd_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#BMath_1st_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#BMath_2nd_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#BMath_3rd_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#MMath_1st_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#MMath_2nd_year"/>
+<centretHead rdf:resource="http://localhost/Institute#TSSK_Rao"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#ISICC  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#ISICC">
+<rdf:type rdf:resource="http://localhost/Institute#Centre"/>
+<listedCourse rdf:resource="http://localhost/Institute#BStat_1st_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#BStat_2nd_year"/>
+<listedCourse rdf:resource="http://localhost/Institute#BStat_3rd_year"/>
+<centretHead rdf:resource="http://localhost/Institute#SS_Panza"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#ISIDC  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#ISIDC">
+<rdf:type rdf:resource="http://localhost/Institute#Centre"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#KS_Raghavan  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#KS_Raghavan">
+<rdf:type rdf:resource="http://localhost/Institute#Professor"/>
+<dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-11-24</dateOfBirth>
+<hasTeachingExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</hasTeachingExperience>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</city>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KS</firstName>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prof01102005</rollNo>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raghavan</lastName>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~ksr</homepage>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ksraghavan@drtc.isibang.ac.in</email>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Knowledge_Management"/>
+<supervisorOf rdf:resource="http://localhost/Institute#Radharani_Rit"/>
+<hasGender rdf:resource="http://localhost/Institute#male"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Knowledge_Management  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Knowledge_Management">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#KS_Raghavan"/>
+</owl:NamedIndividual>
+ <!--
+ http://localhost/Institute#Library_and_Information_Science 
+-->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Library_and_Information_Science">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#MA  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#MA">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#MCom  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#MCom">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#MLISc  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#MLISc">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Equivalent to ADIS</rdfs:comment>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#MMath_1st_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#MMath_1st_year">
+<rdf:type rdf:resource="http://localhost/Institute#MMath"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#MMath_2nd_year  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#MMath_2nd_year">
+<rdf:type rdf:resource="http://localhost/Institute#MMath"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#MPhil  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#MPhil">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#MSc  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#MSc">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Manju_M  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Manju_M">
+<rdf:type rdf:resource="http://localhost/Institute#Assistant"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manju M.</rdfs:label>
+<state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kerala</state>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M.</lastName>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manju</firstName>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manju@drtc.isibang.ac.in</email>
+<hasQualification rdf:resource="http://localhost/Institute#BA"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasQualification rdf:resource="http://localhost/Institute#MLISc"/>
+<hasGender rdf:resource="http://localhost/Institute#female"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Mathematics  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Mathematics">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Metrics  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Metrics">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Mithun_Raj_M  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Mithun_Raj_M">
+<rdf:type rdf:resource="http://localhost/Institute#Postgraduate_Student"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mithun Raj M.</rdfs:label>
+<ZIP rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+<country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+<state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kerala</state>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mithun Raj</firstName>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trichur</city>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~mithun</homepage>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mithun@drtc.isibang.ac.in</email>
+<pgStudent rdf:resource="http://localhost/Institute#ADIS_2nd_year"/>
+<hasQualification rdf:resource="http://localhost/Institute#BSc"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<hasSupervisor rdf:resource="http://localhost/Institute#Devika_P_Madalli"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasDiscipline rdf:resource="http://localhost/Institute#Library_and_Information_Science"/>
+<hasDiscipline rdf:resource="http://localhost/Institute#Physics"/>
+<hasGender rdf:resource="http://localhost/Institute#male"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#NC2005  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#NC2005">
+<rdf:type rdf:resource="http://localhost/Institute#Conference"/>
+<heldOn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22-24 Feb 2005</heldOn>
+<topicOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Seminar on Consortia</topicOf>
+<eventsEditor rdf:resource="http://localhost/Institute#Devika_P_Madalli"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#NLP  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#NLP">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Nabonita_Guha  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Nabonita_Guha">
+<rdf:type rdf:resource="http://localhost/Institute#Senior_Research_Student"/>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"/>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guha</lastName>
+<country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+<state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jharkhand</state>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nabonita</firstName>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS031</rollNo>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ranchi</city>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~guha</homepage>
+<hasSupervisor rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+<hasQualification rdf:resource="http://localhost/Institute#BA"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Digital_library"/>
+<researchArea rdf:resource="http://localhost/Institute#Faceted_ontology"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasDiscipline rdf:resource="http://localhost/Institute#Library_and_Information_Science"/>
+<hasQualification rdf:resource="http://localhost/Institute#MLISc"/>
+<hasResearchInterest rdf:resource="http://localhost/Institute#Ontology"/>
+<hasGender rdf:resource="http://localhost/Institute#female"/>
+</owl:NamedIndividual>
+ <!--
+ http://localhost/Institute#Next_generation_catalogue 
+-->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Next_generation_catalogue">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Topic"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Ontology  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Ontology">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Interest"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#A.R.D._Prasad"/>
+<researchInterestOf rdf:resource="http://localhost/Institute#Biswanath_Dutta"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Operations_Research  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Operations_Research">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#PhD  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#PhD">
+<rdf:type rdf:resource="http://localhost/Institute#Qualification"/>
+<rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelors of Commerce</rdfs:comment>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Physics  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Physics">
+<rdf:type rdf:resource="http://localhost/Institute#Discipline"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Pradip_Patra  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Pradip_Patra">
+<rdf:type rdf:resource="http://localhost/Institute#Undergraduate_Student"/>
+<ZIP rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100008</ZIP>
+<country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolkata</city>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patra</lastName>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pradip</firstName>
+<state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Bengal</state>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://isical.ac.in/~pradip</homepage>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pradip@isical.ac.in</email>
+<ugStudent rdf:resource="http://localhost/Institute#BStat_2nd_year"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISICC"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#SMU"/>
+<hasGender rdf:resource="http://localhost/Institute#male"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Quantitative_analysis  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Quantitative_analysis">
+<rdf:type rdf:resource="http://localhost/Institute#Research_Topic"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Radharani_Rit  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Radharani_Rit">
+<rdf:type rdf:resource="http://localhost/Institute#Postgraduate_Student"/>
+<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radharani Rit</rdfs:label>
+<dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-11-22</dateOfBirth>
+<rollNo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADIS0607</rollNo>
+<country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+<city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolkata</city>
+<firstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radharani</firstName>
+<lastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rit</lastName>
+<state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Bengal</state>
+<homepage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://drtc.isibang.ac.in/~radha</homepage>
+<email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radha@drtc.isibang.ac.in</email>
+<pgStudent rdf:resource="http://localhost/Institute#ADIS_2nd_year"/>
+<hasQualification rdf:resource="http://localhost/Institute#BCom"/>
+<hasDiscipline rdf:resource="http://localhost/Institute#Commerce"/>
+<hasAffiliation rdf:resource="http://localhost/Institute#DRTC"/>
+<belongsToCentre rdf:resource="http://localhost/Institute#ISIBC"/>
+<hasSupervisor rdf:resource="http://localhost/Institute#KS_Raghavan"/>
+<hasDiscipline rdf:resource="http://localhost/Institute#Library_and_Information_Science"/>
+<hasGender rdf:resource="http://localhost/Institute#female"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#SMU  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#SMU">
+<rdf:type rdf:resource="http://localhost/Institute#Unit"/>
+<affiliationOf rdf:resource="http://localhost/Institute#TSSK_Rao"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#SQC  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#SQC">...</owl:NamedIndividual>
+ <!--  http://localhost/Institute#SS_Panza  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#SS_Panza">...</owl:NamedIndividual>
+ <!--  http://localhost/Institute#SWS  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#SWS">...</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Sanjeev_Kumar_Sunny  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Sanjeev_Kumar_Sunny">...</owl:NamedIndividual>
+ <!--...-->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Semantic_Web_based_e-Government_services">...</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Statistics  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Statistics">...</owl:NamedIndividual>
+ <!--  http://localhost/Institute#TSSK_Rao  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#TSSK_Rao">...</owl:NamedIndividual>
+ <!--  http://localhost/Institute#Vinit_Kumar  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#Vinit_Kumar">...</owl:NamedIndividual>
+ <!--  http://localhost/Institute#female  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#female">
+<rdf:type rdf:resource="http://localhost/Institute#Gender"/>
+</owl:NamedIndividual>
+ <!--  http://localhost/Institute#male  -->
+<owl:NamedIndividual rdf:about="http://localhost/Institute#male">
+<rdf:type rdf:resource="http://localhost/Institute#Gender"/>
+</owl:NamedIndividual>
+ <!--
+ 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     
+-->
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+<owl:distinctMembers rdf:parseType="Collection">
+<rdf:Description rdf:about="http://localhost/Institute#DRTC"/>
+<rdf:Description rdf:about="http://localhost/Institute#EMU"/>
+<rdf:Description rdf:about="http://localhost/Institute#SMU"/>
+<rdf:Description rdf:about="http://localhost/Institute#SQC"/>
+</owl:distinctMembers>
+</rdf:Description>
+</rdf:RDF>
+<!--
+ Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net 
+-->

@@ -1,0 +1,1 @@
+from rasa_nlu.extractors import crf_entity_extractor
